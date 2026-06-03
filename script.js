@@ -16,7 +16,7 @@ const progressBar = document.getElementById("progress");
 
 const quizQuestions = [
     {
-        quesiton: "Bubulle est de quelle couleur ?",
+        question: "Bubulle est de quelle couleur ?",
         answers: [
             {   text: "Noir", correct: false    },
             {   text: "Rousse", correct: false    },
@@ -26,7 +26,7 @@ const quizQuestions = [
     },
 
     {
-        quesiton: "Bubulle est née en quelle année ?",
+        question: "Bubulle est née en quelle année ?",
         answers: [
             {   text: "2014", correct: false    },
             {   text: "2015", correct: true    },
@@ -36,7 +36,7 @@ const quizQuestions = [
     },
 
     {
-        quesiton: "Que fait Bubulle lorsqu'elle rencontre quelqu'un pour la première fois ?",
+        question: "Que fait Bubulle lorsqu'elle rencontre quelqu'un pour la première fois ?",
         answers: [
             {   text: "Elle mange", correct: false    },
             {   text: "Elle bois", correct: false    },
@@ -46,7 +46,7 @@ const quizQuestions = [
     },
 
     {
-        quesiton: "Que fait Bubulle pour exrimer son mécontentement ?",
+        question: "Que fait Bubulle pour exrimer son mécontentement ?",
         answers: [
             {   text: "Elle soufle du nez", correct: true    },
             {   text: "Elle bave de la bouche", correct: false    },
@@ -56,7 +56,7 @@ const quizQuestions = [
     },
 
     {
-        quesiton: "Et enfin, quelle est l'activité principale de Bubulle ?",
+        question: "Et enfin, quelle est l'activité principale de Bubulle ?",
         answers: [
             {   text: "Dormir", correct: false    },
             {   text: "Bouffer", correct: false    },
@@ -151,6 +151,8 @@ function showResults() {
     resultScreen.classList.add("active");
 
     finalScoreSpan.textContent = score;
+
+    const percentage = (score/quizQuestions.length) * 100;
 
     if (percentage === 100) {
         resultMessage.textContent = "Bravo, tu as Bubulle dans la peau !";
